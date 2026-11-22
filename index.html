@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FTUI Accessible Route</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><h1>FTUI Accessible Route</h1><p>Navigate Your Campus Without Barriers</p></header>
+<main>
+<section class="panel"><h2>Temukan Rute</h2>
+<label for="startingPoint">Titik awal</label><select id="startingPoint"><option value="">Pilih titik awal</option></select>
+<label for="destination">Tujuan</label><select id="destination"><option value="">Pilih tujuan</option></select>
+<div class="actions"><button id="findRouteButton">Cari Rute</button><button id="startNavigationButton">Mulai Navigasi GPS</button><button id="stopNavigationButton" disabled>Hentikan GPS</button></div>
+<p id="status">Pilih titik awal dan tujuan.</p></section>
+<section class="panel">
+  <h2>Pemindai QR Code</h2>
+  <button id="scanButton">Buka Pemindai QR</button>
+  <button id="closeScanButton" disabled>Tutup</button>
+  <div id="qr-reader"></div>
+  <p id="qrStatus"></p>
+</section>
+
+<section class="panel">
+  <div id="map"></div>
+  <p class="note">Titik biru mengikuti posisi GPS perangkat saat navigasi aktif.</p>
+</section>
+
+<section id="routeInfo" class="panel" hidden>
+  <h2>Informasi Rute</h2>
+  <div id="routeDetails"></div>
+  <p class="note">Kondisi ramp, tangga, lift, dan permukaan jalan tetap perlu diverifikasi langsung di lokasi.</p>
+</section>
+</main><footer>FTUI Accessible Route · Prototype</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://unpkg.com/html5-qrcode"></script><script src="script.js"></script></body></html>
